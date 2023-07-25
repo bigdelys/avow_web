@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Avow</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: 'Inter-Regular', sans-serif;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            height: 100vh;            
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            padding: 20px;
+            align-items: center;
+            z-index: 10;
+            position: relative;
+        }
+
+        .logo {
+            width: 100px;
+        }
+
+        h1 {
+            font-size: 3em; /* Adjust this value to increase or decrease the font size */
+        }
+
+        .launch-button {
+            padding: 15px 30px;
+            background-color: rgb(158, 0, 0);
+            color: white;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .launch-button:hover {
+            background-color: #ff4d4d;
+        }
+
+        .main-content {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            top: 10%;
+            left: 0;
+            right: 0;
+            text-align: center;
+            z-index: 10;
+        }
+
+        .whitelist-button {
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: rgb(185, 183, 183);
+            color: black;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .whitelist-button:hover {
+            background-color: white;
+        }
+
+        .banner-image {
+            position: absolute;
+            top: 0;
+            left: 5%;  /* Adjust this to center the image */
+            width: 90%;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 1; /* Lower than other elements but higher than body */
+        }
+
+        .banner-image {
+            animation: rotate 1200s linear infinite;
+        }
+
+        @keyframes rotate {
+        from {
+            transform: rotate(0deg);
+        }
+        to {
+            transform: rotate(360deg);
+        }
+        }
+
+        .launch-button:hover {
+            background-color: #da0514;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                top: 10%;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img class="logo" src="avow_logo_4_400.png" alt="Avow logo">
+        <button class="launch-button">Launch App</button>
+    </div>
+    <div class="main-content">
+        <h1>Keep abreast of expert opinions 20 times faster</h1>
+        <h2>We continuously scan youtube and extract predictions from your favorite experts</h2>
+        <button class="whitelist-button">Request Invite</button>
+    </div>
+    <img class="banner-image" src="background.jpg" alt="Background Image">
+</body>
+</html>
