@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>Avow</title>
+    <link rel="icon" href="avow_icon_2_256.png" type="image/png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter&display=swap">
     <style>
         body {
-            background-color: black;
+            background-color: rgb(6, 6, 8);
             color: white;
             font-family: 'Inter-Regular', sans-serif;
             margin: 0;
@@ -85,7 +86,14 @@
         }
 
         .banner-image {
-            animation: rotate 1200s linear infinite;
+            animation: rotate 2000s linear infinite;            
+        }
+
+        /* Disable animation on mobile devices */
+        @media (max-width: 768px) {
+            .banner-image {
+                animation: none;
+            }
         }
 
         @keyframes rotate {
@@ -112,7 +120,7 @@
 <body>
     <div class="header">
         <img class="logo" src="avow_logo_4_400.png" alt="Avow logo">
-        <button class="launch-button">Launch App</button>
+        <a href="app/index.html"><button class="launch-button">Launch App</button></a>
     </div>
     <div class="main-content">
         <h1>Keep abreast of expert opinions 20 times faster</h1>
